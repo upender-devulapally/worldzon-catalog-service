@@ -1,0 +1,11 @@
+require: rubocop-performance
+Metrics/LineLength:
+  Max: 130
+Metrics/ModuleLength:
+  Min: 2
+Metrics/MethodLength:
+  Max: 20
+Metrics/AbcSize:
+  Max: 30 # default 15
+Metrics/CyclomaticComplexity:
+  Max: 8 # default 6
