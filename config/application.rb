@@ -47,6 +47,6 @@ module WorldzonCatalogService
     end
     # ==> Sidekiq as active_jobs queue adapter
     # config.active_job.queue_adapter = Rails.env.production? ? :sidekiq : :async
-    # config.active_job.queue_adapter = :sidekiq
+    config.active_job.queue_adapter = :sidekiq
   end
 end

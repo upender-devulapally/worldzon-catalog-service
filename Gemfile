@@ -37,5 +37,19 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+# ==> Background Jobs
+# Different redis db with namespace for different rails projects, see below for more
+# gem 'redis-namespace'
+gem 'sidekiq'
+# gem 'sidekiq-batch' # Sidekiq Batch Jobs Implementation(without using pro)
+# Sidekiq::Debounce is a client-side Sidekiq middleware which provides a way to easily rate-limit creation of Sidekiq jobs
+# gem 'sidekiq-debounce'
+# gem 'whenever', require: false
+
+# => JSON parser (using blueprinter instead jbuilder slow rendering)
+gem 'blueprinter'
+# gem 'fcm' # Ruby bindings to Firebase Cloud Messaging (FCM) for Android, iOS or Web
+gem 'oj' # Oj (Optimized JSON) is fast. Faster than the built in Ruby json gem
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
