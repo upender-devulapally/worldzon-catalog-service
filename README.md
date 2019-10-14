@@ -24,3 +24,18 @@ OR
 ```ruby
 rails new worldzon-catalog-service --api -T --database=postgresql --skip-active-storage
 ```
+
+### Docker Compose
+> For `development` environment
+>
+> Images 'postgres', 'redis' and sidekiq implementation
+
+```ruby
+ $ docker-compose build
+ $ docker-compose run app rake db:create db:migrate
+ $ docker-compose up
+ $ docker-compose run app rake db:seed
+```
+Now visit:
+
+http://localhost:3000/
