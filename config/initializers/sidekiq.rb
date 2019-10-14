@@ -51,7 +51,9 @@ redis_db = case Rails.env.to_sym
            else
              1
            end
-redis = { url: "redis://127.0.0.1:6379/#{redis_db}",
+# DOCKER fix:
+# https://stackoverflow.com/questions/48802444/rails-docker-sidekiq-error-connecting-to-redis-on-127-0-0-16379-errnoe?rq=1
+redis = { url: "redis://redis:6379/#{redis_db}",
           # namespace: "doo-date-#{Rails.env}", # enable while dealing with multiple projects
           network_timeout: 5 }
 # SERVER
